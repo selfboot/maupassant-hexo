@@ -13,7 +13,6 @@ block content
           for category in page.categories.toArray()
             a(href=url_for(category.path))= category.name
       if theme.busuanzi == true
-        script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
         span#busuanzi_container_page_pv= ' | '
           span#busuanzi_value_page_pv
           span= ' ' + __('Hits')
@@ -21,16 +20,17 @@ block content
       a.ds-thread-count(data-thread-key=page.path, href=url_for(page.path) + '#comments')
     if theme.disqus
       a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if page.toc
-      div(class='clear')
-        div(id='toc' class='toc-article')
-          div(class='toc-title')= __('contents')
-          != toc(page.content)
     .post-content
       != page.content
+    if theme.copyright.enabled == true
+      include _partial/copyright
+    if theme.donate.enabled == true
+      include _partial/donate
     if theme.shareto == true
       script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
       a.article-share-link(data-url='#{page.permalink}', data-id='#{page._id}')= __('shareto')
+    if theme.shareto == false
+      .addthis_sharing_toolbox
     include _partial/tag
     include _partial/post_nav
     if theme.duoshuo

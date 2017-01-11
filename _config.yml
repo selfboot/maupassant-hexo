@@ -1,17 +1,33 @@
-fancybox: true ## If you want to use fancybox please set the value to true.
-duoshuo: ## Your duoshuo_shortname, e.g. username
-disqus: ## Your disqus_shortname, e.g. username
+## If you want to use fancybox please set the value to true.
+fancybox: true
+## Your disqus_shortname, e.g. username
+disqus: xuelangZF
+
 google_search: true ## Use Google search, true/false.
-baidu_search: ## Use Baidu search, true/false.
-swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
-tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
-self_search: ## Use a jQuery-based local search engine, true/false.
-google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
-baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
-show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
-shareto: true ## If you want to use the share button please set the value to true.
+# baidu_search:
+
+## Your Google Analytics tracking id, e.g. UA-42425684-2
+google_analytics: UA-41784041-1
+baidu_analytics: fd3ab4b3c488cbb43afa1c2669f06648
+
+## If you want to show the count of categories in the sidebar widget please set the value to true.
+show_category_count: true
+## If you want to use the share button please set the value to true.
+shareto: false
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
+
+copyright:
+    enabled: true
+    author: selfboot
+    email: xuezaigds@gmail.com
+    site: http://selfboot.cn
+
+donate:
+    enabled: true               # If true, allowed donate; if false, disable donate
+    message: 内容不错，打赏你啦 # donate message
+    wechat: http://xuelangzf-github.qiniudn.com/weixin.jpg
+    alipay: http://xuelangzf-github.qiniudn.com/zhifubao.jpg
 
 menu:
   - page: home
@@ -21,8 +37,11 @@ menu:
     directory: archives/
     icon: fa-archive
   - page: about
-    directory: about/
+    directory: aboutme.html
     icon: fa-user
+  - page: guestbook
+    directory: guestbook.html
+    icon: fa-comments
   - page: rss
     directory: atom.xml
     icon: fa-rss
@@ -32,30 +51,11 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - category
   - tag
   - recent_posts
-  - recent_comments
-  - links
-
-links:
-  - title: site-name1
-    url: http://www.example1.com/
-  - title: site-name2
-    url: http://www.example2.com/
-  - title: site-name3
-    url: http://www.example3.com/
-
-timeline:
-  - num: 1
-    word: 2014/06/12-Start
-  - num: 2
-    word: 2014/11/29-XXX
-  - num: 3
-    word: 2015/02/18-DDD
-  - num: 4
-    word: More
+  - toc
 
 # Static files
 js: js
 css: css
 
 # Theme version
-version: 0.0.0
+version: 1.0.0

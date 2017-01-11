@@ -1,0 +1,7 @@
+if page.toc
+  #toc.widget
+    .widget-title
+      i(class='fa fa-list-ul')= ' ' + __('contents')
+
+    ul.dsq-widget-list
+      != toc(page.content)

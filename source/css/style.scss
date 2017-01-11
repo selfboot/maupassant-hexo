@@ -15,14 +15,13 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
-    font-family: "PingFangSC-Regular", Helvetica, "Helvetica Neue", "Segoe UI",
-                 "Hiragino Sans GB", "Source Han Sans CN", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
 }
 
 body {
     background-color: #FFF;
     color: #444;
-    font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
@@ -145,6 +144,9 @@ div {
             li {
                 margin: 5px 0;
                 line-height: 1.5;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
         }
         .category-list-count {
@@ -264,7 +266,6 @@ div {
         line-height: 1.77;
         color: #444;
         padding-top: 15px;
-        text-align: justify;
         text-justify: distribute;
         word-break: normal;
         h2 {
@@ -281,10 +282,11 @@ div {
         p {
             margin: 0 0 1.234em;
             code {
-                display: inline-block;
+                display: inline;
                 margin: 0 5px;
                 padding: 0 5px;
-                background: #f7f8f8;
+                background: #f3f3f3;
+                color: #c7254e;
             }
             a {
                 color: #01579f;
@@ -400,9 +402,8 @@ div {
 }
 
 #footer {
-    padding: .8em 0 3.6em;
+    padding: .8em 0 1em;
     margin-top: 1em;
-    line-height: 2.5;
     color: #6E7173;
     text-align: center;
     span {
@@ -436,6 +437,9 @@ div {
     .hidden_mid_and_down {
         display: none !important;
     }
+    i.fa-rss{
+        display: none !important;
+    }
     #sidebar {
         border-left-width: 0px;
     }
@@ -467,7 +471,16 @@ div {
     }
 }
 
-blockquote,.stressed {
+blockquote{
+    padding: 1em 2em 0.1em 1em;
+    margin: 1em 0;
+    border-left: 2px solid #009a61;
+    background: #f6f6f6;
+    color: #555;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+.stressed {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 2.5em 0;
@@ -475,7 +488,7 @@ blockquote,.stressed {
     color: #555;
     border-left: none;
 }
-blockquote:before,.stressed-quote:before {
+.stressed-quote:before {
     content: "\201C";
     display: block;
     font-family: times;
@@ -1654,25 +1667,21 @@ figure.highlight,
 }
 
 /* toc*/
-.toc-article {
-  border: 1px solid #bbb;
-  border-radius: 7px;
-  margin: 1.1em 0 0 2em;
-  padding: 0.7em 0.7em 0 0.7em;
-  max-width: 40%;
-}
 .toc-title {
   font-size: 120%;
 }
 #toc {
   line-height: 1em;
-  float: right;
   .toc {
     padding: 0;
     margin: 0.5em;
     line-height: 1.8em;
     li {
       list-style-type: none;
+    }
+    a:hover, a.active {
+      background: #666;
+      color: #fff;
     }
   }
   .toc-child {
@@ -1830,4 +1839,7 @@ em.search-keyword {
   font-weight: bold;
   font-style: normal;
   color: #01579f;
+}
+.addthis_sharing_toolbox{
+    float: right;
 }
