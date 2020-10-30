@@ -54,7 +54,7 @@ window.onload = (function() {
       '</div>' +
       '</div>' +
       '<div class="github-ft">' +
-      '<a class="github-via" href="' + (response_obj.blog || response_obj.html_url) + '">Available for hire.</a>' +
+      '<a class="github-via" href="' + (response_obj.blog || response_obj.html_url) + '">Work for Tencent.</a>' +
       '<a class="github-btn" href="' + response_obj.html_url + '">Follow</a>' +
       '</div>' +
       '</div>';
@@ -62,7 +62,36 @@ window.onload = (function() {
   }
 
   function fail() {
-    e.innerHTML = "获取用户信息失败！";
+    var s = '<div class="github-usercard">' +
+      '<div class="github-hd">' +
+      '<a class="github-avatar" href="https://github.com/selfboot" target="_top">' +
+      '<img src="https://avatars2.githubusercontent.com/u/2769831"></a>' +
+      '</a>' +
+      '<strong><a target="_blank" href="https://github.com/selfboot">' +
+      'selfboot' + '</a></strong>' +
+      '<span>@selfboot</span>' +
+      '</div>' +
+      '<div class="github-bd">' +
+      '<div class="github-desc">' +
+      'A student of Computer Science, like coding, reading!' +
+      '<ul><li>' +
+      '<a href="https://github.com/selfboot?tab=repositories" target="_top"><strong>' + "***" + '</strong>Repos</a>' +
+      '</li>' +
+      '<li>' +
+      '<a href="https://gist.github.com/selfboot" target="_top"><strong>' + "***" + '</strong>Gists</a>' +
+      '</li>' +
+      '<li>' +
+      '<a href="https://github.com/selfboot?tab=followers" target="_top"><strong>' + "***" + '</strong>Followers</a></li>' +
+      '</ul>' +
+      '</div>' +
+      '</div>' +
+      '<div class="github-ft">' +
+      '<a class="github-via" href="https://github.com/selfboot">Work for Tencent.</a>' +
+      '<a class="github-btn" href="https://github.com/selfboot">Follow</a>' +
+      '</div>' +
+      '</div>';
+
+    e.innerHTML = s;
   }
 });
 
