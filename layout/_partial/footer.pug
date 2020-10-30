@@ -1,15 +1,11 @@
-#footer= '© '
-  script(async='', src='https:////busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
+#footer= 'Copyright © ' + date(Date.now(), 'YYYY') + ' '
+  script(async='', src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js')
   a(href=url_for('.'), rel='nofollow')= config.title + '.'
   |  Powered by
   a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
   a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
   |  by
-  a(rel='nofollow', target='_blank', href='https://github.com/tufu9441')  tufu9441.
-
-  p
-    |  Hosted by
-    a(rel='nofollow', target='_blank', href='https://pages.github.com/' style="font-weight: bold") Github  Coding Pages
+  a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
 
   p
     span#busuanzi_container_site_pv

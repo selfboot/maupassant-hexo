@@ -1,22 +1,61 @@
-## If you want to use fancybox please set the value to true.
-fancybox: true
-## Your disqus_shortname, e.g. username
-disqus: xuelangZF
+disqus: xuelangZF ## Your disqus_shortname, e.g. username
+uyan: ## Your uyan_id. e.g. 1234567
+livere: ## Your livere data-uid, e.g. MTAyMC8zMDAxOC78NTgz
+changyan: ## Your changyan appid, e.g. cyrALsXc8
+changyan_conf: ## Your changyan conf, e.g. prod_d8a508c2825ab57eeb43e7c69bba0e8b
+gitalk:
+  enable: false ## If you want to use Gitment comment system please set the value to true.
+  owner: ## Your GitHub ID, e.g. username
+  repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
+  client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+  admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
+valine: ## https://valine.js.org
+  enable: false ## If you want to use Valine comment system, please set the value to true.
+  appid: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+  appkey: ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
+  notify: false ## Mail notifier, see https://github.com/xCss/Valine/wiki/Valine-评论系统中的邮件提醒设置
+  verify: false ## Validation code.
+  placeholder: Just so so ## Comment box placeholders.
+  avatar: "mm" ## Gravatar type, see https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
+  pageSize: 10 ## Number of comments per page.
+  guest_info: nick,mail,link ## Attributes of reviewers.
+# MiniValine
+# See: https://github.com/MiniValine/MiniValine
+minivaline:
+  enable: false
+  appId:  # Your leancloud application appid
+  appKey:  # Your leancloud application appkey
+  placeholder: Write a Comment # Comment box placeholder
+  adminEmailMd5: # The MD5 of Admin Email to show Admin Flag.
+  math: true # Support MathJax.
+  md: true # Support Markdown.
+  # MiniValine's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available values: en  | zh-CN | (and many more)
+  # More i18n info: https://github.com/MiniValine/minivaline-i18n
+  lang:
 
 google_search: true ## Use Google search, true/false.
-# baidu_search:
-
-## Your Google Analytics tracking id, e.g. UA-42425684-2
-google_analytics: UA-41784041-1
-baidu_analytics: fd3ab4b3c488cbb43afa1c2669f06648
-
-## If you want to show the count of categories in the sidebar widget please set the value to true.
-show_category_count: true
-## If you want to use the share button please set the value to true.
-shareto: false
+baidu_search: false ## Use Baidu search, true/false.
+swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
+self_search: false ## Use a jQuery-based local search engine, true/false.
+google_analytics: UA-41784041-1## Your Google Analytics tracking id, e.g. UA-42425684-2
+baidu_analytics: fd3ab4b3c488cbb43afa1c2669f06648 ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
+fancybox: true ## If you want to use fancybox please set the value to true.
+show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
+toc_number: true ## If you want to add list number to toc please set the value to true.
+shareto: true ## If you want to use the share button please set the value to true, and you must have hexo-helper-qrcode installed.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+wordcount: false ## If you want to display the word counter and the reading time expected to spend of each post please set the value to true, and you must have hexo-wordcount installed.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
-
+canvas_nest:
+  enable: false ## If you want to use dynamic background please set the value to true, you can also fill the following parameters to customize the dynamic effect, or just leave them blank to keep the default effect.
+  color: ## RGB value of the color, e.g. "100,99,98"
+  opacity: ## Transparency of lines, e.g. "0.7"
+  zIndex: ## The z-index property of the background, e.g. "-1"
+  count: ## Quantity of lines, e.g. "150"
+  
 copyright:
     enabled: true
     author: selfboot
@@ -28,7 +67,7 @@ donate:
     message: 内容不错，打赏你啦 # donate message
     wechat: https://slefboot-1251736664.cos.ap-beijing.myqcloud.com/weixin.jpg
     alipay: https://slefboot-1251736664.cos.ap-beijing.myqcloud.com/zhifubao.jpg
-
+    
 menu:
   - page: home
     directory: .
@@ -46,7 +85,7 @@ menu:
     directory: atom.xml
     icon: fa-rss
 
-widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
+widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, toc
   - search
   - category
   - tag
@@ -58,4 +97,4 @@ js: js
 css: css
 
 # Theme version
-version: 1.0.0
+version: 0.0.0
