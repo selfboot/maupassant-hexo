@@ -11,7 +11,8 @@ $(function() {
                 var margin_height = parseInt($(this).css('marginTop'));
                 if($(window).scrollTop() >= $(this).offset().top-margin_height) {
                     $('a.toc-link').removeClass('active');
-                    $('a.toc-link[href="#' + id + '"]').addClass('active');
+                    var escapeHerf = encodeURIComponent(id)
+                    $('a.toc-link[href="#' + escapeHerf + '"]').addClass('active');
                 }
             }
         });

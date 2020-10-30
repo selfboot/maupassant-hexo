@@ -6,14 +6,15 @@ head
     meta(content='telephone=no', name='format-detection')
     meta(name='description', content=config.description)
     block title
-    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
-    if theme.dark == true
-        link(rel='stylesheet', type='text/css', href=url_for(theme.css)+'/dark.css' + '?v=' + theme.version)
     link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css')
     link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css')
     link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css')
     link(rel='stylesheet', href='//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css')
     script(type='text/javascript', src='//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js')
+    
+    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
+    if theme.dark == true
+        link(rel='stylesheet', type='text/css', href=url_for(theme.css)+'/dark.css' + '?v=' + theme.version)
     link(rel='icon', mask='',sizes='any', href=url_for('favicon.ico'))
     link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.ico'))
     link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
