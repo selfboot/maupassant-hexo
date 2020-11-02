@@ -60,7 +60,7 @@ copyright:
     enabled: true
     author: selfboot
     email: xuezaigds@gmail.com
-    site: http://selfboot.cn
+    site: https://selfboot.cn
 
 donate:
     enabled: true               # If true, allowed donate; if false, disable donate
