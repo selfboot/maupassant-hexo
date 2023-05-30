@@ -29,6 +29,15 @@ head
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
         ga('create','#{theme.google_analytics}','auto');ga('send','pageview');
 
+    //- Google tag (gtag.js)
+    if theme.google_analytics_GA4
+      script(async src="https://www.googletagmanager.com/gtag/js?id=" + theme.google_analytics_GA4)
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', theme.google_analytics_GA4);
+
     if theme.baidu_analytics
       script.
         var _hmt = _hmt || [];
