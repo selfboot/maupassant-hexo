@@ -31,7 +31,7 @@ head
 
     //- Google tag (gtag.js)
     if theme.google_analytics_GA4
-      script(async src="https://www.googletagmanager.com/gtag/js?id=" + '#{theme.google_analytics_GA4}')
+      script(async src="https://www.googletagmanager.com/gtag/js?id=" + theme.google_analytics_GA4)
       script.
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
