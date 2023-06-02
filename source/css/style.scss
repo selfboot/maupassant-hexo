@@ -286,14 +286,22 @@ div {
         padding-top: 15px;
         text-justify: distribute;
         word-break: normal;
-        h2 {
-            margin: 1.4em 0 1.1em;
-            border-bottom: 1px solid #eee;
+        h1 h2 h3 h4 h5 h6 {
             overflow: hidden;
         }
-        h3 {
+        h1 {
             margin: 1.4em 0 1.1em;
+            font-size: 1.5em;
         }
+        h2 {
+            margin: 1.2em 0 1.1em;
+            font-size: 1.3em;
+        }
+        h3 {
+            margin: 1em 0 1.1em;
+            font-size: 1.1em;
+        }
+
         pre code {
             padding: 0 2em;
         }
