@@ -10,7 +10,7 @@ head
     link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css')
     link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css')
     link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css')
-    script(type='text/javascript', src='https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js')
+    script(async, type='text/javascript', src='https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js')
     
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
     if theme.dark == true
@@ -23,7 +23,7 @@ head
       link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
     
     if theme.busuanzi == true
-      script(async='', src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
+      script(async, src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
       meta(name='referrer', content='no-referrer-when-downgrade')
 
     //- Google tag (gtag.js)
@@ -40,13 +40,14 @@ head
         var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
+          hm.async = true; 
           hm.src = 'https://hm.baidu.com/hm.js?' + '#{theme.baidu_analytics}';
           var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(hm, s);
           })();
 
     if !(theme.copycode == false && (theme.donate.enable == false && page.donate != true) && theme.post_copyright.enable == false)
-      script(type='text/javascript',src='https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js')
-      script(type='text/javascript', src='https://cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js')
+      script(async, type='text/javascript',src='https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js')
+      script(async, type='text/javascript', src='https://cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js')
       link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css')
 
