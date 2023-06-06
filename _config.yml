@@ -79,6 +79,9 @@ menu:
   - page: about
     directory: aboutme.html
     icon: fa-user
+  - page: links
+    directory: links.html
+    icon: fa-link
   - page: guestbook
     directory: guestbook.html
     icon: fa-comments
