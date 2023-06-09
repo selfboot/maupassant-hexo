@@ -38,6 +38,7 @@ minivaline:
 
 google_search: true ## Use Google search, true/false.
 baidu_search: false ## Use Baidu search, true/false.
+baidu_verity: LY3rwomQ3l ## Your baidu_verify, e.g. LY3rwomQ3l
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
 self_search: false ## Use a jQuery-based local search engine, true/false.
 google_analytics: UA-41784041-1 ## Your Google Analytics tracking id, e.g. UA-42425684-2
