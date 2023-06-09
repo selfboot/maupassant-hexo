@@ -42,7 +42,7 @@ swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
 self_search: false ## Use a jQuery-based local search engine, true/false.
 google_analytics: UA-41784041-1 ## Your Google Analytics tracking id, e.g. UA-42425684-2
 google_analytics_GA4: G-QNFB9JLSPV ## Your Google Analytics 4 (GA4) property., e.g. G-XXXXXXXXXX
-baidu_analytics: fd3ab4b3c488cbb43afa1c2669f06648 ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
+baidu_analytics: e3bfebc81c8312413bc42e608fbe2dfe ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 fancybox: true ## If you want to use fancybox please set the value to true.
 show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: true ## If you want to add list number to toc please set the value to true.
