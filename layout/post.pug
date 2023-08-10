@@ -33,10 +33,10 @@ block content
     .post-content
       != page.content
 
-    if theme.copyright.enabled == true
+    if theme.copyright.enabled == true && page.copyright != false
       include _widget/copyright.pug
 
-    if theme.donate.enabled == true
+    if theme.donate.enabled == true && page.donate != false
       include _widget/donate.pug
 
     if theme.shareto == true
