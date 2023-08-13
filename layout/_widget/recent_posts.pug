@@ -1,4 +1,25 @@
+//- .widget
+//-   .widget-title
+//-     i(class='fa fa-file-o')= ' ' + __('recent')
+//-   != list_posts({amount: 10})
+//- Debug: Print the value of page.path
+if page.path
+  //- This will display the value of page.path in the HTML source code
+  //- Open "View Source" in your browser to see this
+  | <!-- Debug: page.path = #{page.path} -->
+
 .widget
   .widget-title
     i(class='fa fa-file-o')= ' ' + __('recent')
-  != list_posts({amount: 10})
+  ul
+    - var filteredPosts = site.posts.toArray()
+    - if (page.category === '法律普及' || page.path === 'links.html') {
+    -   filteredPosts = filteredPosts.filter(post => post.categories.map(c => c.name).includes('法律普及'))
+    - } else {
+    -   filteredPosts = filteredPosts.filter(post => !post.categories.map(c => c.name).includes('法律普及'))
+    - }
+    - filteredPosts.sort((a, b) => b.date - a.date)
+    - filteredPosts = filteredPosts.slice(0, 10)
+    each post in filteredPosts
+      li
+        a(href=url_for(post.path), title=post.title)= post.title

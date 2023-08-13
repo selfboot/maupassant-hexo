@@ -17,8 +17,9 @@ block content
           h2= -year
           ul.listing
             for post in posts
-              li
-                span.date= post.date.format(config.date_format)
-                a(href=url_for(post.path), title=post.title)
-                  +title(post)
+              if (page.category === __('guestbook') || (page.category !== __('guestbook') && !post.categories.map(c => c.name).includes(__('guestbook'))))
+                li
+                  span.date= post.date.format(config.date_format)
+                  a(href=url_for(post.path), title=post.title)
+                    +title(post)
   include _partial/paginator.pug

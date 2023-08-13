@@ -82,10 +82,10 @@ menu:
     icon: fa-user
   - page: links
     directory: links.html
-    icon: fa-link
+    icon: fa-user-graduate
   - page: guestbook
-    directory: guestbook.html
-    icon: fa-comments
+    directory: /categories/法律普及/
+    icon: fa-scale-balanced
   - page: rss
     directory: atom.xml
     icon: fa-rss
