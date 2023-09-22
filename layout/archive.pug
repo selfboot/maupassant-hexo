@@ -12,14 +12,15 @@ block content
       h1.label-title=  __('reading_label', page.category || page.tag)
   .post
     .post-archive
-        - var allposts = page.posts.toArray().reduce((r, v, i, a, k = -v.date.format('YYYY')) => ((r[k] || (r[k] = [])).push(v), r), {})
-        each posts, year in allposts
+      - var allposts = page.posts.toArray().reduce((r, v, i, a, k = -v.date.format('YYYY')) => ((r[k] || (r[k] = [])).push(v), r), {})
+      each posts, year in allposts
+        - var filteredPosts = posts.filter(post => (page.category === __('guestbook') || (page.category !== __('guestbook') && !post.categories.map(c => c.name).includes(__('guestbook')))))
+        if filteredPosts.length > 0
           h2= -year
           ul.listing
-            for post in posts
-              if (page.category === __('guestbook') || (page.category !== __('guestbook') && !post.categories.map(c => c.name).includes(__('guestbook'))))
-                li
-                  span.date= post.date.format(config.date_format)
-                  a(href=url_for(post.path), title=post.title)
-                    +title(post)
-  include _partial/paginator.pug
+            for post in filteredPosts
+              li
+                span.date= post.date.format(config.date_format)
+                a(href=url_for(post.path), title=post.title)
+                  +title(post)
+    include _partial/paginator.pug
