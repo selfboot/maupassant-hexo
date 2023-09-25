@@ -7,11 +7,11 @@ head
     meta(content='telephone=no', name='format-detection')
     meta(name='description', content=page.description)
     block title
-    link(rel='stylesheet', href='https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css')
-    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/grids-responsive-min.css') 
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/normalize.min.css') 
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/pure-min.min.css') 
-    script(type='text/javascript', src='https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js')
+    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/grids-responsive-min.css') 
+    link(rel='stylesheet', href='https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+    script(type='text/javascript', src=url_for(theme.js) + '/jquery.min.js')
     
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
     if theme.dark == true
@@ -48,7 +48,7 @@ head
           })();
 
     if !(theme.copycode == false && (theme.donate.enable == false && page.donate != true) && theme.post_copyright.enable == false)
-      script(async, type='text/javascript',src='https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js')
-      script(async, type='text/javascript', src='https://cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js')
-      link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css')
+      script(async, type='text/javascript', src=url_for(theme.js) + '/clipboard.min.js' )
+      script(async, type='text/javascript', src=url_for(theme.js) + '/toastr.min.js')
+      link(rel='stylesheet', href=url_for(theme.css) + '/toastr.min.css')
 
