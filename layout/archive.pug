@@ -7,6 +7,7 @@ block title
      title= page.tag
   if page.archive
      title= __('archive')
+
 block content
   if page.category || page.tag
       h1.label-title=  __('reading_label', page.category || page.tag)
@@ -14,7 +15,13 @@ block content
     .post-archive
       - var allposts = page.posts.toArray().reduce((r, v, i, a, k = -v.date.format('YYYY')) => ((r[k] || (r[k] = [])).push(v), r), {})
       each posts, year in allposts
-        - var filteredPosts = posts.filter(post => (page.category === __('guestbook') || (page.category !== __('guestbook') && !post.categories.map(c => c.name).includes(__('guestbook')))))
+        - filteredPosts = posts
+        if page.archive
+          - filteredPosts = posts.filter(post => !post.categories.map(c => c.name).includes(__('guestbook')))
+        else if page.category
+          - filteredPosts = posts.filter(post => (page.category === __('guestbook') || (page.category !== __('guestbook') && !post.categories.map(c => c.name).includes(__('guestbook')))))
+        else if page.tag
+          - filteredPosts = posts
         if filteredPosts.length > 0
           h2= -year
           ul.listing
