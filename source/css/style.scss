@@ -222,34 +222,15 @@ div {
     .post-meta {
         padding: 0;
         margin: 15px 0 0;
-        color: #6E7173;
+        color: #000000;
         float: left;
         display: inline;
         text-indent: .15em;
-        &:before {
-            font-family: "FontAwesome";
-            content: "\f073";
-            padding-right: 0.3em;
-        }
-        .category {
-            &:before {
-                font-family: "FontAwesome";
-                content: "\f07c";
-                padding-right: 0.3em;
-            }
-        }
-        #busuanzi_value_page_pv {
-            &:before {
-                font-family: "FontAwesome";
-                content: "\f024";
-                padding-right: 0.3em;
-            }
-        }
     }
     .ds-thread-count {
         padding: 0;
         margin: 15px 0 0;
-        color: #6E7173;
+        color: #000000;
         float: right;
         display: inline;
         text-indent: .15em;
