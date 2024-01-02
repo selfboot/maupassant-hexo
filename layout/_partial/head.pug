@@ -23,6 +23,9 @@ head
     if config.feed
       link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
     
+    //- Cloudflare Web Analytics
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "973c5bad683a49b8af76df256779f523"}'></script>
+    //- <!-- End Cloudflare Web Analytics -->
     if theme.busuanzi == true
       script(async, src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
       meta(name='referrer', content='no-referrer-when-downgrade')
