@@ -1,5 +1,14 @@
+-
+  function languageSpecificTagCloud(options) {
+    const currentLang = page.lang || 'zh-CN';
+    const tags = site.tags.filter(cat => 
+      cat.posts.some(post => (post.lang || 'zh-CN') === currentLang)
+    );
+    
+    return tagcloud(tags, options);
+  }
+
 .widget
   .widget-title
-    i(class='fa fa-star-o')= ' ' + __('tags')
-  .tagcloud
-    != tagcloud({min_font: 15, max_font: 15, amount: 100, orderby: 'count'})
+    i(class='fa fa-folder-o')= ' ' + __('tags')
+  != languageSpecificTagCloud({min_font: 15, max_font: 15, amount: 100, orderby: 'count'})

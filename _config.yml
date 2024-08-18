@@ -103,3 +103,7 @@ css: css
 
 # Theme version
 version: 1.0.0
+
+languages:
+  zh-CN
+  en

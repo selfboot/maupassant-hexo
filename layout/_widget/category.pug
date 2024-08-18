@@ -1,4 +1,18 @@
+-
+  function languageSpecificCategories(options) {
+    const currentLang = page.lang || 'zh-CN';
+    const categories = site.categories.filter(cat => 
+      cat.posts.some(post => (post.lang || 'zh-CN') === currentLang)
+    );
+    
+    return list_categories(categories, options);
+  }
+
 .widget
   .widget-title
     i(class='fa fa-folder-o')= ' ' + __('categories')
-  != list_categories({show_count: theme.show_category_count})
+  != languageSpecificCategories({show_count: theme.show_category_count})
+
+//- Debug information
+| <!-- Debug: Current Language = #{page.lang || 'zh-CN'} -->
+| <!-- Debug: Number of Categories = #{site.categories.filter(cat => cat.posts.some(post => (post.lang || 'zh-CN') === (page.lang || 'zh-CN'))).length} -->

@@ -1,11 +1,5 @@
-//- .widget
-//-   .widget-title
-//-     i(class='fa fa-file-o')= ' ' + __('recent')
-//-   != list_posts({amount: 10})
 //- Debug: Print the value of page.path
 if page.path
-  //- This will display the value of page.path in the HTML source code
-  //- Open "View Source" in your browser to see this
   | <!-- Debug: page.path = #{page.path} -->
 
 .widget
@@ -13,6 +7,12 @@ if page.path
     i(class='fa fa-file-o')= ' ' + __('recent')
   ul
     - var filteredPosts = site.posts.toArray()
+    - var currentLang = page.lang || 'zh-CN'
+    - 
+      filteredPosts = filteredPosts.filter(post => {
+        var postLang = post.lang || 'zh-CN';
+        return postLang === currentLang;
+      })
     - if (page.category === '法律普及' || page.path === 'links.html') {
     -   filteredPosts = filteredPosts.filter(post => post.categories.map(c => c.name).includes('法律普及'))
     - } else {
@@ -23,3 +23,6 @@ if page.path
     each post in filteredPosts
       li
         a(href=url_for(post.path), title=post.title)= post.title
+
+//- Debug: Display current language and number of filtered posts
+| <!-- Debug: Current Language = #{currentLang}, Filtered Posts Count = #{filteredPosts.length} -->

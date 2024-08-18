@@ -55,4 +55,15 @@ head
       script(async, type='text/javascript', src=url_for(theme.js) + '/toastr.min.js')
       link(rel='stylesheet', href=url_for(theme.css) + '/toastr.min.css')
 
+    script.
+      function switchLanguage(lang) {
+        var currentPath = window.location.pathname;
+        var newPath;
+        if (lang === 'en') {
+          newPath = '/en' + currentPath.replace(/^\/(zh-CN\/)?/, '/');
+        } else {
+          newPath = currentPath.replace(/^\/en/, '');
+        }
+        window.location.href = newPath;
+      }
 
