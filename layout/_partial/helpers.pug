@@ -10,10 +10,12 @@ mixin a_with_current(href, content, id)
   - var url = localizedUrl(url_for(href))
   if (href == '.' && (is_home() || is_post())) || is_current(href)
     a.current(href=url)
-      i(class='fa' + ' ' + id)= ' ' + content
+      i(class='fa ' + id)
+      span= ' ' + content
   else
     a(href=url)
-      i(class='fa' + ' ' + id)= ' ' + content
+      i(class='fa ' + id)
+      span= ' ' + content
 
 mixin title(page)
   if page

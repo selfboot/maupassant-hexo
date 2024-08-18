@@ -156,12 +156,13 @@ div {
         position: absolute;
         right: 0;
         bottom: 0;
+        font-family: "Monaco", "Segoe UI", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif;
         a {
             display: inline-block;
             padding: 3px 20px 3px;
             line-height: 30px;
             color: #444;
-            font-size: 13px;
+            font-size: 14px;
             border: 1px solid transparent;
             &:hover {
                 border-bottom-color: #444;
