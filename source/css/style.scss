@@ -77,27 +77,79 @@ div {
     text-align: left;
     border-bottom: 1px solid #ddd;
     position: relative;
+
     .site-name {
         margin-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
         h1 {
             padding: 0;
             margin: 0;
             height: 0;
             overflow: hidden;
         }
+
         #logo {
             font: bold 38px/1.12 "Times New Roman", Georgia, Times, sans-serif;
             color: #555;
+            flex-grow: 1;
+            margin-right: 20px;
+
             span,
             &:hover {
                 color: #777;
             }
         }
+
         .description {
             margin: .2em 0 0;
             color: #999;
+            width: 100%;
+            order: 3;
+        }
+
+        .lang-select-wrapper {
+            align-self: center;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+
+            .fa-globe {
+                margin-right: 8px;
+                color: #555;
+                font-size: 16px;
+            }
+
+            #lang-select {
+                padding: 5px 10px;
+                padding-right: 25px; // 为下拉箭头留出空间
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: white;
+                font-size: 14px;
+                color: #555;
+                appearance: none; // 移除默认的下拉箭头
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='%23555' d='M0 2l4 4 4-4z'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+
+                &:hover {
+                    border-color: #999;
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: #777;
+                }
+            }
         }
     }
+
     #nav-menu {
         margin: 10px 0 -1px;
         padding: 0;

@@ -74,21 +74,27 @@ menu:
   - page: home
     directory: .
     icon: fa-home
+    lang: ['zh-CN', 'en']
   - page: archive
     directory: archives/
     icon: fa-archive
+    lang: ['zh-CN', 'en']
   - page: about
     directory: aboutme.html
     icon: fa-user
+    lang: ['zh-CN', 'en']
   - page: links
     directory: links.html
     icon: fa-user-graduate
+    lang: ['zh-CN']
   - page: guestbook
     directory: /categories/法律普及/
     icon: fa-scale-balanced
+    lang: ['zh-CN']
   - page: rss
     directory: atom.xml
     icon: fa-rss
+    lang: ['zh-CN']
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, toc
   - search

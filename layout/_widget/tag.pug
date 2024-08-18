@@ -1,14 +1,41 @@
 -
   function languageSpecificTagCloud(options) {
     const currentLang = page.lang || 'zh-CN';
-    const tags = site.tags.filter(cat => 
-      cat.posts.some(post => (post.lang || 'zh-CN') === currentLang)
+    let tags = site.tags.filter(tag => 
+      tag.posts.some(post => (post.lang || 'zh-CN') === currentLang)
     );
-    
-    return tagcloud(tags, options);
+
+    if (!tags.length) return '';
+
+    // 默认选项和处理
+    const minFont = options.min_font || 10;
+    const maxFont = options.max_font || 20;
+    const unit = options.unit || 'px';
+    const result = [];
+
+    // 计算标签大小
+    const sizes = tags.map(tag => tag.posts.length);
+    const max = Math.max(...sizes);
+    const min = Math.min(...sizes);
+    // Limit the number of tags
+    if (options.amount) {
+      tags = tags.limit(options.amount);
+    }
+    tags.forEach(tag => {
+      const sizeRatio = (tag.posts.length - min) / (max - min);
+      const fontSize = minFont + (maxFont - minFont) * sizeRatio;
+      const tagPath = (currentLang === 'en' ? '/en/' : '/') + tag.path;
+      const style = `font-size: ${fontSize.toFixed(2)}${unit};`;
+
+      result.push(`<a href="${tagPath}" style="${style}">${tag.name}</a>`);
+    });
+
+    return result.join(' ');
   }
 
+//- Ref: https://github.com/hexojs/hexo/blob/439ee6d19ead7973048b61f896437c30803cf17a/lib/plugins/helper/tagcloud.ts
 .widget
   .widget-title
     i(class='fa fa-folder-o')= ' ' + __('tags')
-  != languageSpecificTagCloud({min_font: 15, max_font: 15, amount: 100, orderby: 'count'})
+  .tagcloud
+    != languageSpecificTagCloud({min_font: 15, max_font: 15, amount: 100})

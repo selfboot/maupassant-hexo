@@ -4,15 +4,27 @@
     const categories = site.categories.filter(cat => 
       cat.posts.some(post => (post.lang || 'zh-CN') === currentLang)
     );
-    
-    return list_categories(categories, options);
+
+    if (!categories.length) return '';
+
+    // 默认选项和处理
+    const showCount = options.show_count || theme.show_category_count;
+    const result = [];
+
+    categories.forEach(cat => {
+      const filteredPosts = cat.posts.filter(post => (post.lang || 'zh-CN') === currentLang);
+      const count = filteredPosts.length;
+      const langPrefix = (currentLang === 'en') ? '/en/' : '/';
+      const catPath = `${langPrefix}${cat.path}`;
+      const catName = cat.name;
+
+      result.push(`<li><a href="${catPath}">${catName}</a>${showCount ? ` (${count})` : ''}</li>`);
+    });
+
+    return `<ul>${result.join('')}</ul>`;
   }
 
 .widget
   .widget-title
     i(class='fa fa-folder-o')= ' ' + __('categories')
   != languageSpecificCategories({show_count: theme.show_category_count})
-
-//- Debug information
-| <!-- Debug: Current Language = #{page.lang || 'zh-CN'} -->
-| <!-- Debug: Number of Categories = #{site.categories.filter(cat => cat.posts.some(post => (post.lang || 'zh-CN') === (page.lang || 'zh-CN'))).length} -->
