@@ -35,3 +35,12 @@ word_cnt: Words
 read_time: Minutes
 copy_success_text: "Copy Successed!"
 Copy_address_and_show_QRCode: "Copy address and show QRCode"
+
+totalVisits: "Total Site Visits: "
+times: "Times"
+uniqueVisitors: "Unique Visitors: "
+people: "People"
+donate: "Sponsor"
+donate_message: "Good content, Sponsor it"
+donate_wechat: "WeChat Sponsor"
+donate_alipay: "Alipay Sponsor"

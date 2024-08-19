@@ -8,10 +8,10 @@
 
   p
     span#busuanzi_container_site_pv
-    | 本站总访问量
+    = __('totalVisits') + ' '
     span#busuanzi_value_site_pv
-    | 次，
+    = ' ' + __('times') + '，'
     span#busuanzi_container_site_uv
-    | 本站访客数
+    = __('uniqueVisitors') + ' '
     span#busuanzi_value_site_uv
-    | 人次
+    = ' ' + __('people')

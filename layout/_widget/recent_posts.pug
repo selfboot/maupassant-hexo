@@ -4,7 +4,8 @@ if page.path
 
 .widget
   .widget-title
-    i(class='fa fa-file-o')= ' ' + __('recent')
+    i(class='fa fa-file-o')
+    span= __('recent')
   ul
     - var filteredPosts = site.posts.toArray()
     - var currentLang = page.lang || 'zh-CN'

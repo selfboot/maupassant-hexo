@@ -28,7 +28,7 @@ html(lang=config.language)
           select#lang-select(onchange='switchLanguage(this.value)')
             option(value='zh-CN' selected=page.lang === 'zh-CN') 中文
             option(value='en' selected=page.lang === 'en') English
-        p.description= config.subtitle
+        p.description= page.lang == 'en' ? config.subtitle_en : config.subtitle
 
       #nav-menu
         - for (var i in theme.menu)

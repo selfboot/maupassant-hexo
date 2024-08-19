@@ -35,3 +35,12 @@ read_time: 分钟
 copy_success_text: "复制成功!"
 no_donate: "没有开启任何Donate选项!"
 Copy_address_and_show_QRCode: "复制地址和显示二维码!"
+
+totalVisits: "本站总访问量"
+times: "次"
+uniqueVisitors: "本站访客数:"
+people: "人次"
+donate: "赞助"
+donate_message: "内容不错，赞助一下"
+donate_wechat: "微信打赏"
+donate_alipay: "支付宝打赏"

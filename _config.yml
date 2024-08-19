@@ -65,7 +65,7 @@ copyright:
     site: https://selfboot.cn
 
 donate:
-    enabled: true               # If true, allowed donate; if false, disable donate
+    enabled: true            # If true, allowed donate; if false, disable donate
     message: 内容不错，打赏你啦 # donate message
     wechat: https://slefboot-1251736664.file.myqcloud.com/weixin.jpg
     alipay: https://slefboot-1251736664.file.myqcloud.com/zhifubao.jpg

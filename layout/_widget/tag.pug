@@ -36,6 +36,7 @@
 //- Ref: https://github.com/hexojs/hexo/blob/439ee6d19ead7973048b61f896437c30803cf17a/lib/plugins/helper/tagcloud.ts
 .widget
   .widget-title
-    i(class='fa fa-folder-o')= ' ' + __('tags')
+    i(class='fa fa-folder-o')
+    span= __('tags')
   .tagcloud
     != languageSpecificTagCloud({min_font: 15, max_font: 15, amount: 100})
