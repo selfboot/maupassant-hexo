@@ -94,7 +94,7 @@ menu:
   - page: rss
     directory: atom.xml
     icon: fa-rss
-    lang: ['zh-CN']
+    lang: ['zh-CN', 'en']
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, toc
   - search
