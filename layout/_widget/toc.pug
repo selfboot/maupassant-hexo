@@ -1,7 +1,8 @@
 if page.toc
   #toc.widget
     .widget-title
-      i(class='fa fa-list-ul')= ' ' + __('contents')
+      i(class='fa fa-list-ul')
+      span=" " + __('contents')
 
     ul.dsq-widget-list
       != toc(page.content)
