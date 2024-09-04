@@ -15,13 +15,7 @@ block content
     .post-archive
       - var allposts = page.posts.toArray().reduce((r, v, i, a, k = -v.date.format('YYYY')) => ((r[k] || (r[k] = [])).push(v), r), {})
       each posts, year in allposts
-        - filteredPosts = posts
-        if page.archive
-          - filteredPosts = posts.filter(post => !post.categories.map(c => c.name).includes(__('guestbook')))
-        else if page.category
-          - filteredPosts = posts.filter(post => (page.category === __('guestbook') || (page.category !== __('guestbook') && !post.categories.map(c => c.name).includes(__('guestbook')))))
-        else if page.tag
-          - filteredPosts = posts
+        - var filteredPosts = posts.filter(post => (page.category === __('guestbook') || (page.category !== __('guestbook') && !post.categories.map(c => c.name).includes(__('guestbook')))))
         if filteredPosts.length > 0
           h2= -year
           ul.listing
