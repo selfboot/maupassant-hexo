@@ -54,6 +54,30 @@ if theme.disqus
            xhr.ontimeout = function () { xhr.abort(); };
            xhr.send(null);
          });
+  script(type="text/javascript").
+    document.addEventListener('DOMContentLoaded', function () {
+      var disqusThread = document.getElementById('disqus_thread');
+      if (!disqusThread) return;
+      
+      function removeAdIframes() {
+        var iframes = disqusThread.getElementsByTagName('iframe');
+        for (var i = iframes.length - 1; i >= 0; i--) {
+          var iframe = iframes[i];
+          if (iframe.src && iframe.src.indexOf("tempest.services.disqus.com/ads-iframe") !== -1) {
+            iframe.parentNode.removeChild(iframe);
+          }
+        }
+      }
+      
+      removeAdIframes();
+      
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          removeAdIframes();
+        });
+      });
+      observer.observe(disqusThread, { childList: true, subtree: true });
+    });
 
 if theme.uyan
   #uyan_frame
