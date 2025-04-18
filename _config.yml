@@ -87,10 +87,6 @@ menu:
     directory: links.html
     icon: fa-user-graduate
     lang: ['zh-CN']
-  - page: guestbook
-    directory: /categories/法律普及/
-    icon: fa-scale-balanced
-    lang: ['zh-CN']
   - page: rss
     directory: atom.xml
     icon: fa-rss
