@@ -5,7 +5,7 @@ head
     meta(content='yes', name='apple-mobile-web-app-capable')
     meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
     meta(content='telephone=no', name='format-detection')
-    meta(name='description', content=page.description)
+    meta(name='description', content=meta_description)
     block title
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/normalize.min.css') 
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/pure-min.min.css') 
@@ -68,3 +68,11 @@ head
         window.location.href = newPath;
       }
 
+    //- Favicon Meta (simplified)
+    - var cdn = theme.cdn_url || ''
+    link(rel='icon', href=cdn + url_for('/favicon.ico'))
+    link(rel='apple-touch-icon', sizes='180x180', href=cdn + url_for('/apple-touch-icon.png'))
+    link(rel='manifest', href=cdn + url_for('/site.webmanifest'))
+
+    if theme.rss
+      link(rel='alternate', type='application/atom+xml', title=config.title, href=url_for(theme.rss))

@@ -131,6 +131,9 @@ css: css
 # Theme version
 version: 1.0.0
 
+# CDN URL prefix for assets
+cdn_url: https://slefboot-1251736664.file.myqcloud.com/selfboot/
+
 languages:
   zh-CN
   en
