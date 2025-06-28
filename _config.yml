@@ -76,11 +76,11 @@ advertisements:
   use_translation: true      # If true, use translation from language files; if false, use content below
   ad1:
     icon: "fa-gamepad"         # FontAwesome icon class, e.g. 
-    link: "https://selfboot.cn/archives/"     # Advertisement link
+    link: "https://puzzles-game.com/"     # Advertisement link
     target: "_blank"         # Link target: _blank for new window, _self for same window
   ad2:
     icon: "fa-robot"         # FontAwesome icon class, e.g.
-    link: "https://selfboot.cn/aboutme.html"  # Advertisement link
+    link: "https://gallery.selfboot.cn"  # Advertisement link
     target: "_blank"         # Link target: _blank for new window, _self for same window
     
 menu:
