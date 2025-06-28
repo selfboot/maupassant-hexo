@@ -1,18 +1,18 @@
 if theme.advertisements && theme.advertisements.enabled
-  .widget.advertisements-widget
+  .widget.recommendations-widget
     .widget-title 
       if theme.advertisements.use_translation
         = __('advertisement_title')
       else
         | 推荐内容
-    .advertisements-container
+    .recommendations-container
       if theme.advertisements.ad1
-        .advertisement-item
-          a.ad-link(href=theme.advertisements.ad1.link target=theme.advertisements.ad1.target || '_blank')
-            .ad-content
+        .recommendation-item
+          a.promo-link(href=theme.advertisements.ad1.link target=theme.advertisements.ad1.target || '_blank')
+            .promo-content
               if theme.advertisements.ad1.icon
                 i.fa(class=theme.advertisements.ad1.icon)
-                span.ad-text
+                span.promo-text
                   if theme.advertisements.use_translation
                     = __('advertisement_ad1_content')
                   else
@@ -24,12 +24,12 @@ if theme.advertisements && theme.advertisements.enabled
                   = theme.advertisements.ad1.content[page.lang] || theme.advertisements.ad1.content['zh-CN']
       
       if theme.advertisements.ad2
-        .advertisement-item
-          a.ad-link(href=theme.advertisements.ad2.link target=theme.advertisements.ad2.target || '_blank')
-            .ad-content
+        .recommendation-item
+          a.promo-link(href=theme.advertisements.ad2.link target=theme.advertisements.ad2.target || '_blank')
+            .promo-content
               if theme.advertisements.ad2.icon
                 i.fa(class=theme.advertisements.ad2.icon)
-                span.ad-text
+                span.promo-text
                   if theme.advertisements.use_translation
                     = __('advertisement_ad2_content')
                   else
