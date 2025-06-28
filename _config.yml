@@ -69,6 +69,19 @@ donate:
     message: 内容不错，打赏你啦 # donate message
     wechat: https://slefboot-1251736664.file.myqcloud.com/weixin.jpg
     alipay: https://slefboot-1251736664.file.myqcloud.com/zhifubao.jpg
+
+# Custom advertisement positions
+advertisements:
+  enabled: true              # If true, show advertisements; if false, hide advertisements
+  use_translation: true      # If true, use translation from language files; if false, use content below
+  ad1:
+    icon: "fa-gamepad"         # FontAwesome icon class, e.g. 
+    link: "https://selfboot.cn/archives/"     # Advertisement link
+    target: "_blank"         # Link target: _blank for new window, _self for same window
+  ad2:
+    icon: "fa-robot"         # FontAwesome icon class, e.g.
+    link: "https://selfboot.cn/aboutme.html"  # Advertisement link
+    target: "_blank"         # Link target: _blank for new window, _self for same window
     
 menu:
   - page: home
@@ -92,8 +105,9 @@ menu:
     icon: fa-rss
     lang: ['zh-CN', 'en']
 
-widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, toc
+widgets: ## Seven widgets in sidebar provided: search, advertisements, category, tag, recent_posts, toc
   - search
+  - advertisements
   - category
   - tag
   - recent_posts

@@ -46,3 +46,8 @@ donate_wechat: "WeChat Sponsor"
 donate_alipay: "Alipay Sponsor"
 friendLink: "Friend Link:"
 puzzles-game: "Puzzle Games"
+
+# Advertisement widget
+advertisement_title: "Recommended"
+advertisement_ad1_content: "Train Your Brain And Stay Smart"
+advertisement_ad2_content: "Use AI And Help Me Make Things"

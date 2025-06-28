@@ -17,11 +17,8 @@
       | 非商业转载请注明作者及出处。商业转载请联系
       a(href="mailto:" + theme.copyright.email) 作者本人
     p
-      | 本文标题为：
-      = page.title
-    p
       | 本文链接为：
-      = url_for(theme.copyright.site)+"/"+page.path
+      a(href=url_for(theme.copyright.site)+"/"+page.path target="_blank")= page.title
   else
     p 
       | Written in Chinese, LLM translated into English

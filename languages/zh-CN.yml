@@ -46,3 +46,8 @@ donate_wechat: "微信打赏"
 donate_alipay: "支付宝打赏"
 friendLink: "友情链接："
 puzzles-game: "益智游戏"
+
+# Advertisement widget
+advertisement_title: "推荐内容"
+advertisement_ad1_content: "训练大脑, 保持聪明"
+advertisement_ad2_content: "人工智能, 助我创造"
