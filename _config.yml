@@ -82,6 +82,17 @@ advertisements:
     icon: "fa-robot"         # FontAwesome icon class, e.g.
     link: "https://gallery.selfboot.cn"  # Advertisement link
     target: "_blank"         # Link target: _blank for new window, _self for same window
+# Friend links configuration
+friends:
+  - name: "盛律师"
+    link: "https://shenglvshi.cn/"
+    description: "专业靠谱的法律服务"
+    avatar: "https://slefboot-1251736664.file.myqcloud.com/20250418_favicon.png"
+  - name: "张洪Heo"
+    link: "https://blog.zhheo.com/"
+    description: "分享设计与科技生活"
+    avatar: "https://img.zhheo.com/i/67d8fa75943e4.webp"
+ 
     
 menu:
   - page: home
@@ -100,10 +111,10 @@ menu:
     directory: links.html
     icon: fa-user-graduate
     lang: ['zh-CN']
-  - page: rss
-    directory: atom.xml
-    icon: fa-rss
-    lang: ['zh-CN', 'en']
+  - page: friends
+    directory: friends.html
+    icon: fa-link
+    lang: ['zh-CN']
 
 widgets: ## Seven widgets in sidebar provided: search, advertisements, category, tag, recent_posts, toc
   - search
