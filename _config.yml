@@ -92,7 +92,14 @@ friends:
     link: "https://blog.zhheo.com/"
     description: "分享设计与科技生活"
     avatar: "https://img.zhheo.com/i/67d8fa75943e4.webp"
- 
+  - name: "林木木"
+    link: "https://immmmm.com/"
+    description: "全站开发工程师"
+    avatar: ""
+  - name: "杜老师说"
+    link: "https://dusays.com"
+    description: "高级网络工程师，网站技术运营总监"
+    avatar: "https://cdn.dusays.com/avatar.png"
     
 menu:
   - page: home
@@ -137,3 +144,4 @@ cdn_url: https://slefboot-1251736664.file.myqcloud.com/selfboot/
 languages:
   zh-CN
   en
+
